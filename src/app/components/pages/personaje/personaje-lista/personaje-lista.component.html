@@ -1,0 +1,34 @@
+<div class="row">
+    <div class="col-xs-12 col-sm-6 col-md-4" *ngFor="let personaje of personajes" >
+        <div class="card">
+            <div class="image">
+                <a [routerLink]="['/personaje-detalle',personaje.id]"></a>
+                <img [src]="personaje.image" [alt]="personaje.name" class="card-img-top " />
+            </div>
+            <div class="card-inner">
+                <div class="header">
+                    <a [routerLink]="['/personaje-detalle',personaje.id]">
+                     <h2>{{personaje.name}}</h2>
+                    </a><h4 [ngClass]="{
+                        'status-dead': personaje.status === 'Dead',
+                        'status-alive': personaje.status === 'Alive',
+                        'status-unknown': personaje.status === 'unknown'
+                      }">
+                      Status: {{ personaje.status }}
+                    </h4>
+                    <small class="text-muted">{{personaje.gender}}</small>
+                </div>
+            </div>
+        </div>
+
+
+
+    </div>
+    <div class="col-xs-12 col-sm-12 col-md-12 mt-5 container-notFound">
+        
+        <p>no se encontraron resultados!</p>
+    </div>
+</div>
+<button class="btn btn-dark">
+
+</button>
