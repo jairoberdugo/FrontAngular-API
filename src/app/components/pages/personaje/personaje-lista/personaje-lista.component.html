@@ -2,8 +2,9 @@
     <div class="col-xs-12 col-sm-6 col-md-4" *ngFor="let personaje of personajes" >
         <div class="card">
             <div class="image">
-                <a [routerLink]="['/personaje-detalle',personaje.id]"  routerLinkActive="active"></a>
-                <img [src]="personaje.image" [alt]="personaje.name" class="card-img-top " />
+                <a [routerLink]="['/personaje-detalle',personaje.id]"  routerLinkActive="active">
+                    <img [src]="personaje.image" [alt]="personaje.name" class="card-img-top " />
+            </a>
             </div>
             <div class="card-inner">
                 <div class="header">
