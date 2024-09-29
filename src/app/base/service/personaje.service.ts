@@ -14,8 +14,16 @@ export class PersonajeService {
     const filter = `${enviroment.baseUrlAPI}/?name=${query}&page=${page}`;
     return this.http.get<personaje[]>(filter)
   }
+  
   getDetails(id:number){
-    return this.http.get<personaje>(`${enviroment.baseUrlAPI}/${id}`);
+    const filter2= `${enviroment.baseUrlAPI}/${id}`;
+    return this.http.get<personaje>(filter2);
 
   }
+
+  getEpisodes(query='',page=1){
+    const filter = `${enviroment.baseUrlAPIep}/?name=${query}&page=${page}`;
+    return this.http.get<personaje[]>(filter)
+  }
+
 }

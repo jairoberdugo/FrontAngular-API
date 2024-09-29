@@ -9,15 +9,15 @@ import { Router } from '@angular/router';
 })
 export class FormSearchComponent {
 
-  constructor(private router: Router){}
+  constructor(private router: Router) { }
 
 
-  onsearch(value:string){
-    console.log('buscador: ',value) // me aseguro de que si este tomando el valor del buscador
-  if (value && value.length > 3){
-    this.router.navigate(['/personaje-lista']),{
-      queryparams:{q:value}
+  onsearch(value: string) {
+    console.log('buscador: ', value) // me aseguro de que si este tomando el valor del buscador
+    if (value && value.length > 3) {
+      this.router.navigate(['/personaje-lista'], {  // queryParams van en el segundo argumento
+        queryParams: { q: value },
+      });
     }
   }
   }
-}

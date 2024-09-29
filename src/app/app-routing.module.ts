@@ -9,7 +9,8 @@ const routes: Routes = [
   },
   { path: 'home', loadChildren: () => import('./components/pages/home/home.module').then(m => m.HomeModule) },
   { path: 'personaje-lista', loadChildren: () => import('./components/pages/personaje/personaje-lista/personaje-lista.module').then(m => m.PersonajeListaModule) },
-  { path: 'personaje-detalle/:id', loadChildren: () => import('./components/pages/personaje/personaje-detalle/personaje-detalle.module').then(m => m.PersonajeDetalleModule) }];
+  { path: 'personaje-detalle/:id', loadChildren: () => import('./components/pages/personaje/personaje-detalle/personaje-detalle.module').then(m => m.PersonajeDetalleModule) },
+  { path: 'episodes', loadChildren: () => import('./components/pages/episodes/episodes.module').then(m => m.EpisodesModule) }];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
