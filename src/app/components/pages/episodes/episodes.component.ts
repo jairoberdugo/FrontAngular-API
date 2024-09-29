@@ -22,8 +22,6 @@ export class EpisodesComponent {
   
   private NumPage=1;
   private query: string="";
-  private hScrollh=200;
-  private sScrollh=500;
   
   constructor(private PersonajeSvc: PersonajeService,private route:ActivatedRoute){}
   
@@ -37,7 +35,7 @@ export class EpisodesComponent {
     ).subscribe((res:any)=>{
       // comprobacion de ejecucion correcta
       if(res?.results?.length){
-      console.log('response=> ',res); //imprimo json resp api
+      console.log('response=> ',res); //imprimo json resp api EPISODES
       const{info,results}=res;
       this.episodes=[...this.episodes, ...results];
       this.info=info;

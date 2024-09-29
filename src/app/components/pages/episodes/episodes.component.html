@@ -6,21 +6,15 @@
             </div>
             <div class="card-inner">
                 <div class="header">
-                    <a>
-                        <h2>{{ episode.name | slice:0:12 }}</h2>
-                    </a>
-                    <h4> EPISODE: {{ episode.episode }}
+                    <h2>Nombre: {{ episode.name | slice:0:12 }}</h2>
+                    <h4>Fecha de emisión: {{ episode.air_date }}</h4>
+                    <h4>
+                      Temporada: {{ episode.episode.slice(1, 3) }} 
+                      Episodio: {{ episode.episode.slice(4) }}
                     </h4>
                 </div>
             </div>
         </div>
-
-
-
-    </div>
-    <div class="col-xs-12 col-sm-12 col-md-12 mt-5 container-notFound">
-        
-        <p>no se encontraron resultados!</p>
     </div>
 </div>
 <button class="btn btn-dark">
